@@ -60,3 +60,25 @@ document.addEventListener('DOMContentLoaded', function() {
         yearSpan.textContent = new Date().getFullYear();
     }
 });
+
+// Go to Top Button
+document.addEventListener('DOMContentLoaded', function() {
+    const goToTopBtn = document.getElementById('go-to-top');
+
+    // Show button when scrolled down 200px
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 200) {
+            goToTopBtn.classList.add('show');
+        } else {
+            goToTopBtn.classList.remove('show');
+        }
+    });
+
+    // Scroll to top on click
+    goToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});

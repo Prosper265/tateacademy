@@ -1970,7 +1970,7 @@ footer {
     
     /* Hero */
     .hero-title {
-        font-size: 1.8em;
+        font-size: 1.5em;
     }
     
     /* Sections */
@@ -2093,7 +2093,7 @@ footer {
 
 
     .header .logo .school-name {
-        font-size: 1em;
+        font-size: 0.8em;
     }
     
     .section-title {
@@ -2167,4 +2167,39 @@ footer {
         grid-column: 1 / 2;
         grid-row: 6 / 7;
     }
+}
+
+/* Go to Top Button */
+#go-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+#go-to-top:hover {
+    background-color: var(--blueBackground);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+#go-to-top svg {
+    width: 24px;
+    height: 24px;
+}
+
+#go-to-top.show {
+    display: flex;
 }
